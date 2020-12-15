@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_15_172213) do
+ActiveRecord::Schema.define(version: 2020_12_15_182056) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2020_12_15_172213) do
     t.string "services", default: [], array: true
     t.string "city"
     t.string "state"
-    t.string "brand_color"
+    t.string "brand_color", default: "#28a745"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

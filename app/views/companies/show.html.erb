@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="bg-success">
-    <div class="container p-5 text-white">
+    <div class="container p-5 text-white" style="background-color: <%= @company.brand_color%>">
       <h1><%= @company.name %></h1>
       <h3><mark>City, State</mark></h3>
       <pre><mark><%=@company.city %>, <%= @company.state%></mark></pre>
@@ -20,6 +20,9 @@
   <div class="row bg-light">
     <div class="col-12 col-lg-8 p-lg-5 pt-4">
       <%= @company.description %>
+    </div>
+    <div data-controller="hello">
+      <input type="hidden" data-hello-target="name" value="vince" />
     </div>
     <div class="col-12 col-lg-4 pt-lg-5">
       <h4>Services</h4>
@@ -37,7 +40,7 @@
     </div>
   </div>
 
-  <div class="bg-success text-white text-center py-3">
+  <div class="bg-success text-white text-center py-3" style="background-color: <%= @company.brand_color%> !important">
     <p class="lead"><%= @company.phone %> — <%= @company.email %></p>
   </div>
 </div>
