@@ -28,7 +28,7 @@ class CompaniesControllerTest < ApplicationSystemTestCase
     visit edit_company_path(@company)
 
     within("form#edit_company_#{@company.id}") do
-      fill_in("company_name", with: "Updated Test Company")
+      fill_in("company_name", with: "Updated Test Company" , fill_options: { clear: :backspace })
       fill_in("company_zip_code", with: "93009")
       click_button "Update Company"
     end
