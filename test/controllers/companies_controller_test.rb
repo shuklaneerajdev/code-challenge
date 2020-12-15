@@ -38,6 +38,9 @@ class CompaniesControllerTest < ApplicationSystemTestCase
     @company.reload
     assert_equal "Updated Test Company", @company.name
     assert_equal "93009", @company.zip_code
+    visit company_path(@company)
+    assert_text "Ventura"
+    assert_text "CA"
   end
 
   test "Create" do
