@@ -51,8 +51,6 @@ ActiveRecord::Schema.define(version: 2020_10_29_120421) do
     t.string "zip_code"
     t.string "phone"
     t.string "email"
-    t.string "city"
-    t.string "state"
     t.string "services", default: [], array: true
   end
 

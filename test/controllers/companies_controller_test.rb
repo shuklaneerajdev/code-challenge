@@ -58,4 +58,15 @@ class CompaniesControllerTest < ApplicationSystemTestCase
     assert_equal "28173", last_company.zip_code
   end
 
+  test "Delete" do
+    visit company_path(@company)
+    page.accept_confirm do
+      click_on "Delete", match: :first
+    end
+
+    assert_text "Company was successfully deleted"
+    visit companies_path
+    assert_no_text "Hometown Painting"
+  end
+
 end

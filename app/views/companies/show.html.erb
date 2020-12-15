@@ -6,6 +6,7 @@
     </div>
     <div class="col text-right">
       <%= link_to "Edit", edit_company_path %>
+      <%= link_to "Delete",  @company, method: :delete, data: { confirm: 'Are you sure?' }  %>
     </div>
   </div>
   <div class="bg-success">
@@ -30,8 +31,8 @@
           <p><%= @company.phone %><br>
           <input type="hidden" value="<%= @company.phone %>" data-target="clipboard.source"></input>
           <a data-action="clipboard#copy" class="clipboard-button pointer text-decoration-none text-dark"> copy</a>
-          <a data-target="clipboard.notice" class="clipboard-button pointer d-none text-decoration-none text-dark" class="d-none"> copied</a> 
-          </p>         
+          <a data-target="clipboard.notice" class="clipboard-button pointer d-none text-decoration-none text-dark" class="d-none"> copied</a>
+          </p>
         </div>
     </div>
   </div>
